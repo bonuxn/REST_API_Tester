@@ -6,10 +6,20 @@ export default defineComponent({
   components: {
     CommunicationLog,
   },
+  methods: {
+    load(){
+      console.log("dada");
+    },
+    cancel()
+    {
+    }
+  }
 });
 </script>
 
 <template>
+  <div>
+    <v-btn prepend-icon="mdi-vuetify" @click="load"> Test Start </v-btn>  </div>
   <div id="app">
     <CommunicationLog />
   </div>

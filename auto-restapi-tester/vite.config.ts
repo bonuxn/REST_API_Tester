@@ -1,8 +1,10 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import dns from "dns";
 
-// @ts-expect-error process is a nodejs global
 const host = process.env.TAURI_DEV_HOST;
+
+dns.setDefaultResultOrder("ipv4first");
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
