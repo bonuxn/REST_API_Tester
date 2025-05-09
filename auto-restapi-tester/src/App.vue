@@ -1,11 +1,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import CommunicationLog from './components/CommunicationLog.vue';
+// import CommunicationLog from './components/CommunicationLog.vue';
 import {invoke} from "@tauri-apps/api/core";
+import HomeView from './views/HomeView.vue';
 
 export default defineComponent({
   components: {
-    CommunicationLog,
+    HomeView,
   },
   methods: {
     load(){
@@ -19,10 +20,8 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
-    <v-btn prepend-icon="mdi-vuetify" @click="load"> Test Start </v-btn>  </div>
   <div id="app">
-    <CommunicationLog />
+    <HomeView />
   </div>
 </template>
 
