@@ -1,11 +1,7 @@
 <template>
   <div>
     <div>
-      <label>filePath</label>
-      <input type="text" :value="filePath" readonly style="width: 300px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"/>
-      <v-btn @click="loadFile">
-        Load
-      </v-btn>
+      <v-file-input label="load" variant="outlined"></v-file-input>
       <p v-if="loadError" style="color: red;">{{ loadError }}</p>
     </div>
 
