@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import CommunicationLog from './components/CommunicationLog.vue';
+import {invoke} from "@tauri-apps/api/core";
 
 export default defineComponent({
   components: {
@@ -8,7 +9,7 @@ export default defineComponent({
   },
   methods: {
     load(){
-      console.log("dada");
+      invoke('load')
     },
     cancel()
     {
